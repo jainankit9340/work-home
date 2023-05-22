@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+
+*{
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1, h2, h3, h4,h5, h6{
+    font-family: 'Abel', sans-serif;
+}
+body{
+    color: #4e4e4e;
+}
+.font-abz{
+    font-family: 'ABeeZee', sans-serif;
+}
+.font-jos{
+    font-family: 'Josefin Sans', sans-serif;
+}
+p{
+    font-size: 18px;
+}
+.container-fluid{
+    width: 90%;
+}
+.jumbo-top{
+    background:  url(../img/COUCH_color.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    position: relative;
+}
+.pos-rel{
+    position: relative;
+}
+header nav.active {
+    background: #e24b2c;
+    transition: all 0.5s linear;
+}
+.title-box{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    flex-direction: column;
+}
+.title-box img{
+    position: relative;
+    margin-bottom: 15px;
+    width: 40%;
+}
+.title-box h2{
+    color: #fff;
+    margin-bottom: 15px;
+}
+.btn{
+    padding: 12px 30px;
+    border-radius: 10px;
+}
+.btn-outline-primary-white-th {
+    color: #fff !important; 
+    border-color: #fff;
+}
+.btn-outline-primary-white-th:hover {
+    background: #e24b2c;
+    border-color: #e24b2c;
+}
+.about-box h2{
+    font-size: 36px;
+    font-weight: 800;
+}
+.about-box h1{
+    font-size: 27px;
+    font-weight: 600;
+}
+.bg-back{
+    background: #eee;
+}
+.wd-100{
+    width: 100%;
+}
+.text-black{
+    color: #000;
+}
+.card-icon{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 3px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.card-icon .icon_img{
+    width: 60px;
+    margin-bottom: 20px;
+}
+.card-icon h3{
+    color: #e24b2c;
+    font-size: 26px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.card-icon p{
+    margin-bottom: 0;
+}
+.card-title-b{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    max-height: 60px;
+}
+
+
+.box-container {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-top: 1.4em;
+    width: 100%;
+}
+.box {
+    list-style-type: none;
+    float: left;
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+    transition: opacity 0.2s, transform 0.35s;
+}
+
+.box.show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 0.4s, transform 0.35s;
+}
+
+.box .inner {
+    padding: 10px;
+    position: relative;
+}
+
+.box a {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.box img {
+    width: calc(100% + 50px);
+    max-width: calc(100% + 50px);
+    transition: opacity 0.35s, transform 0.35s;
+    transform: translate3d(-40px, 0, 0);
+}
+
+.box a::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.65);
+    background-size: cover;
+    z-index: 99;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.box a::after{
+    content: url(../img/SVG/plus.svg);
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 120;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.three-cols .box {
+    width: 100%;
+}
+
+
+.inline-inner {
+    padding: 40px;
+}
+
+.inline-close-btn {
+    background: #FFC107;
+    width: 200px;
+    display: block;
+    margin: auto;
+    height: 53px;
+    text-align: center;
+    line-height: 53px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid #eee;
+}
+
+.inline-close-btn:hover {
+    border-color: #000;
+}
+
+
+
+@media (min-width: 390px) {
+    .three-cols .box {
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 576px) {
+    
+    .three-cols .box {
+        width: 33.3%;
+    }
+
+    .three-cols .box:nth-child(3n+0) {
+        margin-right: 0;
+    }
+
+    .three-cols .box:nth-child(3n+1) {
+        margin-left: 0;
+    }
+
+    .mcbutton {
+        width: auto;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .box:hover img {
+        transform: translate3d(0, 0, 0);
+        transition: opacity 0.35s, transform 0.35s;
+    }
+
+    .box:hover a::before {
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    .box:hover a::after {
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+}
+
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.footer-title{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000;
+    font-family: 'Josefin Sans', sans-serif;
+}
+ul.footer-menu-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer-menu-list li{
+    margin-bottom: 8px;
+}
+.footer-menu-list li a{
+    text-decoration: none;
+    color: rgba(0,0,0,0.65);
+    margin-bottom: 16px;
+    transition: all 0.3s linear ;
+}
+.footer-menu-list li a:hover{
+    color: #000;
+    transition: all 0.3s linear ;
+}
+.s-title{
+    font-size: 14px;
+}
+.fs-14{
+    font-size: 14px;
+}
+.fs-12{
+    font-size: 12px;
+}
+.fs-44{
+    font-size: 44px;
+}
+.fs-16{
+    font-size: 16px;
+}
+.socials a{
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 3px;
+    background: #ccc;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s linear;
+}
+.socials a:hover{
+    background: #e24b2c;
+    color: #fff;
+    transition: all 0.3s linear ;
+}
+.border-bottom-red{
+    border-bottom: 1px solid #e24b2c;
+}
+.bg-transparent{
+    background: transparent;
+}
+.wdi-60{
+    width: 60px;
+    height: 60px;
+}
+.abt-ico{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+ul.list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.t-body{
+    font-size: 14px;
+    line-height: 24px;
+}
+.opacity-25{
+    opacity: 0.25;
+}
+.opacity-75{
+    opacity: 0.75;
+}
+.bg-thm{
+    background: #e24b2c;
+}
